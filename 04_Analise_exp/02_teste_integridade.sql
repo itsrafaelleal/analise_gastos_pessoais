@@ -1,4 +1,5 @@
 
+-- BLOCO 1 = TESTAR INTEGRIDADE DOS DAOS
 -- Confirmar que o ETL funcionou (sem nulos, FKs corretas, sem duplicatas)
 
 -- Contar total de registros na tabela fato (fato_gastos)
