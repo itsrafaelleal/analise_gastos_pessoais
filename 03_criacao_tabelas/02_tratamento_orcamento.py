@@ -6,7 +6,7 @@
 import pandas as pd
 from sqlalchemy import create_engine
 # 1) Ler arquivo bruto de orçamento
-df = pd.read_csv("../01_data/OrcamentoV3.csv", sep=",")
+df = pd.read_csv("../01_data/orcamento.csv", sep=",")
 
 # Remover linhas sem data (registros incompletos)
 df = df.dropna(subset=['data'])

@@ -9,11 +9,11 @@ ALTER TABLE fato_gastos RENAME TO fato_gastos_old;
 ALTER TABLE dim_categoria RENAME TO dim_categoria_old;
 ALTER TABLE dim_responsaveis RENAME TO dim_responsaveis_old;
 ALTER TABLE dim_subcategoria RENAME TO dim_subcategoria_old;
-
--- Criar e Migrar dados pra tabela dim_tipo nomalizada
 ALTER TABLE dim_tipo RENAME TO dim_tipo_old;
+-- Criar e Migrar dados pra tabela dim_tipo nomalizada
+
 CREATE TABLE dim_tipo (
-    id_tipo BIGINT PRIMARY KEY,
+    id_tipo INTEGER PRIMARY KEY,
     nome_tipo TEXT NOT NULL,
     
     CONSTRAINT UK_dim_tipo_nome_tipo 
@@ -23,9 +23,9 @@ INSERT INTO dim_tipo
 SELECT * FROM dim_tipo_old;
 
 -- Criar e Migrar dados pra tabela dim_tipo nomalizada
-ALTER TABLE dim_categoria RENAME TO dim_categoria_old;
+
 CREATE TABLE dim_categoria (
-    id_categoria BIGINT PRIMARY KEY,
+    id_categoria INTEGER PRIMARY KEY,
     nome_categoria TEXT NOT NULL,
     
     CONSTRAINT UK_dim_categoria_nome 
@@ -35,10 +35,9 @@ INSERT INTO dim_categoria
 SELECT id_categoria, nome_categoria FROM dim_categoria_old;
 
 -- Criar Migrar dados pra tabela dim_subcategoria nomalizada
-ALTER TABLE dim_subcategoria RENAME TO dim_subcategoria_old;
 
 CREATE TABLE dim_subcategoria (
-    id_subcategoria BIGINT PRIMARY KEY,
+    id_subcategoria INTEGER PRIMARY KEY,
     nome_subcategoria TEXT NOT NULL,
     
     CONSTRAINT UK_dim_subcategoria_nome 
@@ -49,10 +48,9 @@ INSERT INTO dim_subcategoria
 SELECT id_subcategoria, nome_subcategoria FROM dim_subcategoria_old;
 
 -- Criar Migrar dados pra tabela dim_responsaveis nomalizada
-ALTER TABLE dim_responsaveis RENAME TO dim_responsaveis_old;
 
 CREATE TABLE dim_responsaveis (
-    id_responsavel BIGINT PRIMARY KEY,
+    id_responsavel INTEGER PRIMARY KEY,
     nome_responsavel TEXT NOT NULL,
     
     CONSTRAINT UK_dim_responsaveis_nome 
@@ -64,19 +62,17 @@ SELECT id_responsavel, nome_responsavel FROM dim_responsaveis_old;
 
 -- Criar Migrar dados pra tabela fato nomalizada
 
-ALTER TABLE fato_gastos RENAME TO fato_gastos_old;
-
 CREATE TABLE fato_gastos (
     -- seus 9 campos...
-    id BIGINT PRIMARY KEY,
+    id INTEGER PRIMARY KEY,
     data DATETIME NOT NULL,
     competencia TEXT NOT NULL,
-    id_responsavel BIGINT NOT NULL,
+    id_responsavel INTEGER NOT NULL,
     descricao TEXT NOT NULL,
     valor FLOAT NOT NULL,
-    id_categoria BIGINT NOT NULL,
-    id_subcategoria BIGINT NOT NULL,
-    id_tipo BIGINT NOT NULL,
+    id_categoria INTEGER NOT NULL,
+    id_subcategoria INTEGER NOT NULL,
+    id_tipo INTEGER NOT NULL,
     
     CONSTRAINT FK_fato_responsavel FOREIGN KEY (id_responsavel) REFERENCES dim_responsaveis(id_responsavel),
     CONSTRAINT FK_fato_categoria FOREIGN KEY (id_categoria) REFERENCES dim_categoria(id_categoria),

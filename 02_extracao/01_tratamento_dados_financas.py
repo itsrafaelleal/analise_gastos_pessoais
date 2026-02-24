@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_csv("./data/dados_financas4.csv", sep=";")
+df = pd.read_csv("./data/dados_financas.csv", sep=";")
 df.shape
 
 #%%
