@@ -1,0 +1,7 @@
+# Ignora todos os csv e db
+*.csv
+*.db
+
+# Libera apenas os arquivos de exemplo
+!*_example.csv
+!*_example.db
