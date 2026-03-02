@@ -115,7 +115,7 @@ Tabela: gasto por competência, variação % vs anterior. Pico Dez/2025 (+67%).
 - ✅ **Surrogate keys** eliminam duplicatas nas dimensões
 - ✅ **SQLite + Power BI** via ODBC (configuração inicial complexa)
 - ✅ **`.gitignore`** para dados sensíveis (`data_example/`)
-- ⚠️ **Nunca versionar** dados reais ou DataFrames
+- ⚠️ **Nunca versionar** arquivos de dados
 
 
 
@@ -152,5 +152,4 @@ Get Data → ODBC → SQLite ODBC Driver → 01_data_example/orcamento_example.d
 - [ ] App mobile (React Native)
 
 
-**Rafael Leal** | [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-leal-79805b84/)
-
+<span style="font-size: 1.3em; font-weight: bold;">Rafael Leal</span> | [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-leal-79805b84/)
