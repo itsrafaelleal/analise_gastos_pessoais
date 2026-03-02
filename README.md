@@ -143,10 +143,14 @@ Abra 01_data_example/orcamento_example.db:
 text
 Get Data → ODBC → SQLite ODBC Driver → 01_data_example/orcamento_example.db
 
- Próximos Passos
- Automatizar ETL (direto do sheet)
- Dashboard web público (Streamlit)
- Alertas gastos (Telegram/email)
- Nuvem (PostgreSQL + Supabase)
+##  Próximos Passos
 
- Rafael Leal | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-leal-79805b84//)
+- [ ] Automatizar ETL direto do Google Sheets
+- [ ] Dashboard web público (Streamlit)
+- [ ] Alertas de gastos (Telegram/email)
+- [ ] Migração para nuvem (PostgreSQL + Supabase)
+- [ ] App mobile (React Native)
+
+
+**Rafael Leal** | [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-leal-79805b84/)
+
