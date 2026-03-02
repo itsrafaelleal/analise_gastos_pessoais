@@ -101,19 +101,23 @@ SELECT
     ORDER BY total DESC;
 
 -- Subcategoria somando valores, por ano
-SELECT 
-    s.nome_subcategoria,
-    ROUND(SUM(CASE WHEN f.competencia LIKE '%2023%' THEN f.valor ELSE 0 END), 2) AS soma_2023,
-    ROUND(SUM(CASE WHEN f.competencia LIKE '%2024%' THEN f.valor ELSE 0 END), 2) AS soma_2024,
-    ROUND(SUM(CASE WHEN f.competencia LIKE '%2025%' THEN f.valor ELSE 0 END), 2) AS soma_2025,
-    ROUND(SUM(f.valor), 2) AS total
+WITH gastos_ano AS (
+    SELECT 
+        s.nome_subcategoria,
+        strftime('%Y', f.data) AS ano,
+        f.valor
     FROM fato_gastos f
-    INNER JOIN dim_subcategoria s
-    ON f.id_subcategoria = s.id_subcategoria
-    GROUP BY s.nome_subcategoria
-    ORDER BY total DESC;
-
-
+    INNER JOIN dim_subcategoria s ON f.id_subcategoria = s.id_subcategoria
+)
+SELECT 
+    nome_subcategoria,
+    ROUND(SUM(CASE WHEN ano = '2023' THEN valor ELSE 0 END), 2) AS 2023,
+    ROUND(SUM(CASE WHEN ano = '2024' THEN valor ELSE 0 END), 2) AS 2024,
+    ROUND(SUM(CASE WHEN ano = '2025' THEN valor ELSE 0 END), 2) AS 2025,
+    ROUND(SUM(valor), 2) AS total
+FROM gastos_ano
+GROUP BY nome_subcategoria
+ORDER BY total DESC;
 
 
 
