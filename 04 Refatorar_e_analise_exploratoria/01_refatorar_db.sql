@@ -3,6 +3,8 @@
 -- mas sem definir PK, FK e CONSTRAINS. Porem o SQLite não permite ALTER TABLE então a solução é renomar as tabelas 
 -- criar tabelas  novas sem dados, depois migrar os dados para as tabelas criadas com as regras de negocio
 
+
+
 PRAGMA foreign_keys = ON;
 -- alterar nome de todas as tabelas para old
 ALTER TABLE fato_gastos RENAME TO fato_gastos_old;
@@ -22,7 +24,7 @@ CREATE TABLE dim_tipo (
 INSERT INTO dim_tipo
 SELECT * FROM dim_tipo_old;
 
--- Criar e Migrar dados pra tabela dim_tipo nomalizada
+-- Criar e Migrar dados pra tabela dim_categoria nomalizada
 
 CREATE TABLE dim_categoria (
     id_categoria INTEGER PRIMARY KEY,

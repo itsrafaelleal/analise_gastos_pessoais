@@ -89,8 +89,7 @@ df = df.astype(tipos)
 # 8) Reordenar colunas da tabela fato
 df = df[['id', 'data', 'competencia', 'id_responsavel', 'descricao', 'valor',
          'id_categoria', 'id_subcategoria', 'id_tipo']]
-df.head(10)
-#%%
+
 # 9) conexão e criação do db
 
 engine = create_engine(r"sqlite:///E:\repo_cursos\Proj_dados_financeiros\01_data\orcamento.db")
@@ -108,4 +107,4 @@ df.to_sql('fato_gastos', engine, if_exists='replace', index=False)
 print(pd.read_sql("SELECT COUNT(*) as registros FROM fato_gastos", engine))
 
 engine.dispose()
-# %%
+
