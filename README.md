@@ -68,7 +68,7 @@ Transformei planilhas desorganizadas de gastos pessoais (meu + esposa, desde 202
 
 Dashboard Power BI - 5 Visualizações Principais
 
-## 🎨 Dashboard Power BI - 5 Visualizações
+## 📊 Dashboard Power BI - 5 Visualizações
 
 ### 1. **Visão Geral**
 Cards: total acumulado (R$ 29.734), média mensal (R$ 1.652), último mês (+14%).
@@ -119,31 +119,73 @@ Tabela: gasto por competência, variação % vs anterior. Pico Dez/2025 (+67%).
 
 
 
-##  Como Reproduzir 
+## Como Reproduzir
 
-### Pré-requisitos
+### 📦 Pré-requisitos
+
+Instale as dependências do projeto:
+
+```bash
 pip install -r requirements.txt
+```
 
-1. Dados de Exemplo (já inclusos)
+---
+
+### 1. Dados de Exemplo (já inclusos)
+
+Arquivo com dados sintéticos para teste:
+
+```bash
 01_data_example/orcamento_example.csv  # 1.672 registros sintéticos
+```
 
-2. Executar ETL Python
-# Limpeza inicial
+---
+
+### 2. Executar ETL em Python
+
+#### Limpeza inicial
+
+```bash
 python 02_extracao/01_tratamento_dados_financas.py
-# Dimensões + SQLite
+```
+
+#### Dimensões + SQLite
+
+```bash
 python 03_criacao_tabelas/02_tratamento_orcamento.py
+```
 
-3. SQL de Qualidade
-Abra 01_data_example/orcamento_example.db e execute na ordem:
+---
+
+### 3. SQL de Qualidade
+
+Abra o banco de dados:
+
+```bash
+01_data_example/orcamento_example.db
+```
+
+Execute os scripts SQL **na seguinte ordem**:
+
+```sql
 04_Analise_exp/01_refatorar_db.sql
-04_Analise_exp/02_teste_integridade.sql  
+04_Analise_exp/02_teste_integridade.sql
 04_Analise_exp/03_analise_exploratoria.sql
+```
 
-4. Power BI
-text
+---
+
+### 4. Power BI
+
+No Power BI:
+
+```
 Get Data → ODBC → SQLite ODBC Driver → 01_data_example/orcamento_example.db
+```
 
-##  Próximos Passos
+
+
+#  Próximos Passos
 
 - [ ] Automatizar ETL direto do Google Sheets
 - [ ] Dashboard web público (Streamlit)
