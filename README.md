@@ -134,9 +134,9 @@ python 02_extracao/01_tratamento_dados_financas.py
 python 03_criacao_tabelas/02_tratamento_orcamento.py
 
 3. SQL de Qualidade
-Abra 01_data_example/orcamento_example.db:
+Abra 01_data_example/orcamento_example.db e execute na ordem:
 04_Analise_exp/01_refatorar_db.sql
-04_Analise_exp/02_teste_integridade.sql 
+04_Analise_exp/02_teste_integridade.sql  
 04_Analise_exp/03_analise_exploratoria.sql
 
 4. Power BI
