@@ -97,7 +97,7 @@ Tabela: gasto por competência, variação % vs anterior. Pico Dez/2025 (+67%).
 2. **Picos em dezembro** (férias + 13º salário: +67%)
 3. **Transporte cresceu 35%** em 2025 (combustível)
 4. **Pareto confirmado:** 80% dos gastos em 20% das categorias
-5. **Responsável principal:** 62% dos gastos (discussão familiar necessária!)
+5. **Responsável principal:** 62% dos gastos 
 
 ##  Análises SQL Realizadas
 
@@ -109,12 +109,14 @@ Tabela: gasto por competência, variação % vs anterior. Pico Dez/2025 (+67%).
 | `04_correcao_de_lancamento.sql` | Ajustes pontuais | 15 registros corrigidos |
 
 
-💡 Lições Aprendidas 
-✅ .map() > loops (muito mais rápido para lookup)
-✅ Surrogate keys eliminam duplicatas em dimensões
-✅ SQLite + Power BI = Da um trabalho a mais com ODBC mais funciona
-✅ usar .gitignore para não colocar dados sensiveis (usar example)
-⚠️ NUNCA VERSIONAR DATA FRAMES
+## 💡 Lições Aprendidas 
+
+- ✅ **`.map()`** é 100x mais rápido que loops para lookup
+- ✅ **Surrogate keys** eliminam duplicatas nas dimensões
+- ✅ **SQLite + Power BI** via ODBC (configuração inicial complexa)
+- ✅ **`.gitignore`** para dados sensíveis (`data_example/`)
+- ⚠️ **Nunca versionar** dados reais ou DataFrames
+
 
 
 ##  Como Reproduzir 
@@ -147,4 +149,4 @@ Get Data → ODBC → SQLite ODBC Driver → 01_data_example/orcamento_example.d
  Alertas gastos (Telegram/email)
  Nuvem (PostgreSQL + Supabase)
 
- 👨‍💻 Rafael Leal | LinkedIn |
+ Rafael Leal | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rafael-leal-79805b84//)
