@@ -21,7 +21,7 @@ Transformei planilhas desorganizadas de gastos pessoais (meu + esposa, desde 202
 - Permite análises históricas
 - Conecta com Power BI para insights visuais
 
-**Resultado:** **1.672 registros** processados → **5 tabelas normalizadas** → Dashboard com totais, tendências e top gastos.
+**Resultado:** **2.672 registros** processados → **5 tabelas normalizadas** → Dashboard com totais, tendências e top gastos.
 
 ##  Arquitetura ETL (Extract → Transform → Load)
     Planilhas CSV → [Python Pandas] → Star Schema SQLite → [SQL Análise] → Power BI Dashboard
