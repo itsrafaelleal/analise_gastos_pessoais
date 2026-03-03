@@ -24,9 +24,9 @@ Transformei planilhas desorganizadas de gastos pessoais (meu + esposa, desde 202
 **Resultado:** **2.672 registros** processados → **5 tabelas normalizadas** → Dashboard com totais, tendências e top gastos.
 
 ##  Arquitetura ETL (Extract → Transform → Load)
-    Planilhas CSV → [Python Pandas] → Star Schema SQLite → [SQL Análise] → Power BI Dashboard
-    ↓ Tratamento + Normalização
-    dims: responsavel, categoria, subcat, tipo
+A imagem abaixo resume o fluxo completo do projeto nas etapas de **Extract → Transform → Load**:
+
+<img src="assets/fluxo-ETL.png" alt="Roadmap do projeto ETL de gastos pessoais" width="900">
 
 
 ##  Tecnologias Utilizadas
