@@ -26,7 +26,7 @@ Transformei planilhas desorganizadas de gastos pessoais (meu + esposa, desde 202
 ##  Arquitetura ETL (Extract → Transform → Load)
 A imagem abaixo resume o fluxo completo do projeto nas etapas de **Extract → Transform → Load**:
 
-<img src="assets/fluxo-ETL.png" alt="Roadmap do projeto ETL de gastos pessoais" width="900">
+<img src="assets/fluxo-ETL.png" alt="Roadmap do projeto ETL de gastos pessoais" width="700">
 
 
 ##  Tecnologias Utilizadas
