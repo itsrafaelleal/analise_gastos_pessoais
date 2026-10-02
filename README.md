@@ -190,7 +190,7 @@ Get Data → ODBC → SQLite ODBC Driver → 01_data_example/orcamento_example.d
 - [ ] Automatizar ETL direto do Google Sheets
 - [ ] Dashboard web público (Streamlit)
 - [ ] Alertas de gastos (Telegram/email)
-- [ ] Migração para nuvem (PostgreSQL + Supabase)
+- [ ] Migração para nuvem (AWS)
 - [ ] App mobile (React Native)
 
 
